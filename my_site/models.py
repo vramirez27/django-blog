@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.utils import timezone
 from django.conf import settings
 
+# I was here WUUUAAAHAHHAHAHHAHHAHHAHAHA
 
 class Article(models.Model):
     STATUS_CHOICES = (
@@ -36,7 +37,7 @@ class Article(models.Model):
     def get_absolute_url(self):
         return reverse('article_detail', kwargs={'slug': self.slug, 'pk': self.pk})
 
-
+# BLHA BLAH BALH
 class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
